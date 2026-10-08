@@ -1,7 +1,7 @@
-import Header from "@/components/sections/Header";
+import { Header } from "@/components/sections/Header";
 import Hero from "@/components/sections/Hero";
-import Vitrine from "@/components/sections/Vitrine";
-import Contact from "@/components/sections/Contact";
+import { Vitrine } from "@/components/sections/Vitrine";
+import { Contact } from "@/components/sections/Contact";
 import briefing from "@/content/briefing.json";
 
 export default function Page() {
