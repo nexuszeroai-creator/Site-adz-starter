@@ -1,5 +1,29 @@
+:root {
+  --primary: #0f3e6b;
+  --primary-hover: #113f6e;
+  --primary-soft: #e6eef6;
+  --bg: #f7f8f9;
+  --surface: #fff;
+  --surface-2: #f1f3f5;
+  --text: #12151a;
+  --text-muted: #5a6573;
+  --text-soft: #8a96a5;
+  --border: #e2e7eb;
+  --border-strong: #cbd4dc;
+  --success: #1a7a4c;
+  --warning: #d97706;
+  --safe-area-inset-top: env(safe-area-inset-top, 0px);
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-html { scroll-behavior: smooth; }
-body { @apply bg-white text-slate-900 font-sans antialiased; }
