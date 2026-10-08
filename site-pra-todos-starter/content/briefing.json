@@ -1,0 +1,31 @@
+{
+  "businessName": "Oficina Norte - Modelo",
+  "businessType": "Oficina Mecânica",
+  "template": "local-business",
+  "whatsapp": "5511999999999",
+  "phone": "5511999999999",
+  "address": "Rua Exemplo, 123 - Bairro - São Paulo, SP",
+  "hours": "Seg-Sex 8h-18h | Sáb 8h-12h",
+  "hero": {
+    "title": "Oficina Mecânica no seu bairro - diagnóstico honesto",
+    "subtitle": "Revisão, freios e diagnóstico eletrônico com garantia. Orçamento no WhatsApp em 10 minutos.",
+    "ctaPrimary": "Pedir Orçamento no WhatsApp",
+    "ctaSecondary": "Ver Serviços",
+    "ctaSecondaryHref": "#servicos",
+    "whatsappMessage": "Olá! Gostaria de um orçamento para meu veículo na Oficina Norte. Modelo/ano e serviço desejado:"
+  },
+  "services": [
+    {
+      "title": "Revisão Preventiva",
+      "desc": "Troca de óleo, filtros e checklist completo."
+    },
+    {
+      "title": "Freios e Suspensão",
+      "desc": "Segurança e conforto com peças de qualidade."
+    },
+    {
+      "title": "Diagnóstico Eletrônico",
+      "desc": "Scanner e leitura de falhas precisa."
+    }
+  ]
+}
