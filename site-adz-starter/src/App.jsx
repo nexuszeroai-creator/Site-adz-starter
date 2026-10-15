@@ -27,7 +27,7 @@ const Title = ({ children, sub }) => (
 const glass = 'group relative overflow-hidden rounded-3xl border border-white/10 bg-neutral-900/40 p-8 shadow-2xl shadow-black/40 backdrop-blur-2xl transition-all duration-500 ease-apple hover:-translate-y-1 hover:border-white/20 hover:bg-neutral-900/60';
 
 /* ───────── Navbar ───────── */
-const links = [['Vazamentos', '#vazamentos'], ['Soluções', '#solucoes'], ['Método', '#metodo'], ['Sobre', '#sobre']];
+const links = [['Vazamentos', '#vazamentos'], ['Soluções', '#solucoes'], ['Cases e insights', '#cases'], ['Método', '#metodo'], ['Sobre', '#sobre']];
 
 function Navbar() {
   const [open, setOpen] = useState(false);
@@ -258,6 +258,49 @@ function About() {
   );
 }
 
+
+/* ───────── Cases e insights ───────── */
+function CasesInsights() {
+  return (
+    <section id="cases" className="border-t border-white/10 py-24 sm:py-32">
+      <Wrap>
+        <Title sub="Leitura de indicadores reais compartilhados pela ADZ. Métricas de plataformas não comprovam, isoladamente, vendas ou lucro incremental.">Cases e insights</Title>
+        <div className="mt-12 grid gap-4 lg:grid-cols-2">
+          <article className={glass + ' p-7'}>
+            <div className="flex items-start justify-between gap-4">
+              <div><span className="font-mono text-xs uppercase tracking-widest text-gold-light">Google Analytics 4</span><h3 className="mt-2 text-xl font-medium text-white">Visão de audiência e engajamento</h3></div>
+              <span className="rounded-full border border-white/10 px-3 py-1 text-xs text-zinc-400">Set/2026</span>
+            </div>
+            <dl className="mt-7 grid grid-cols-2 gap-3">
+              {[[ '1.742', 'Usuários' ], ['1.716', 'Novos usuários'], ['1.766', 'Sessões'], ['90,42%', 'Taxa de engajamento']].map(([v,l]) => <div key={l} className="rounded-2xl border border-white/10 bg-black/20 p-4"><dd className="text-2xl font-semibold tracking-tight text-white">{v}</dd><dt className="mt-1 text-xs text-zinc-500">{l}</dt></div>)}
+            </dl>
+            <p className="mt-5 text-sm leading-relaxed text-zinc-400">A captura também mostra a distribuição por dispositivo: 1.413 usuários em desktop, 228 em mobile e 5 em tablet. Vale investigar a experiência mobile sem ignorar a predominância de desktop neste período.</p>
+            <p className="mt-3 text-xs text-zinc-600">Fonte: captura de tela fornecida pela ADZ. Período exibido: 1–30 de setembro de 2026.</p>
+          </article>
+          <article className={glass + ' p-7'}>
+            <span className="font-mono text-xs uppercase tracking-widest text-gold-light">Meta Ads</span>
+            <h3 className="mt-2 text-xl font-medium text-white">Leitura de mídia paga</h3>
+            <dl className="mt-7 grid grid-cols-2 gap-3">
+              {[[ '16.841', 'Impressões (linha visível)' ], ['122', 'Cliques no link (linha visível)'], ['R$ 33,73', 'Valor gasto (linha visível)'], ['R$ 0,28', 'Custo por clique (linha visível)']].map(([v,l]) => <div key={l} className="rounded-2xl border border-white/10 bg-black/20 p-4"><dd className="text-2xl font-semibold tracking-tight text-white">{v}</dd><dt className="mt-1 text-xs text-zinc-500">{l}</dt></div>)}
+            </dl>
+            <p className="mt-5 text-sm leading-relaxed text-zinc-400">Os números acima pertencem a uma linha visível da captura, não ao total da conta. Antes de avaliar desempenho, é necessário confirmar período, campanha, objetivo, qualidade dos cliques e conversões atribuídas.</p>
+            <p className="mt-3 text-xs text-zinc-600">Fonte: captura de tela fornecida pela ADZ. Não foram somadas linhas repetidas.</p>
+          </article>
+        </div>
+        <div className="mt-4 rounded-3xl border border-dashed border-white/15 bg-white/[0.02] p-7 sm:p-9">
+          <span className="font-mono text-xs uppercase tracking-widest text-gold-light">Vídeos e demonstrações</span>
+          <h3 className="mt-2 text-2xl font-semibold tracking-tight text-white">Conteúdo em vídeo, carregado sob demanda</h3>
+          <p className="mt-3 max-w-3xl leading-relaxed text-zinc-400">Os dois vídeos enviados serão incorporados com reprodução iniciada pelo visitante, sem carregar arquivos de vídeo durante a abertura da página. Para ativar a reprodução pública, os arquivos precisam estar hospedados em URLs acessíveis; elas ainda não estão configuradas neste projeto.</p>
+          <div className="mt-6 grid gap-3 sm:grid-cols-2">
+            <div className="rounded-2xl border border-white/10 bg-neutral-950/60 p-5"><p className="font-medium text-white">Case de sucesso — lucro</p><p className="mt-2 text-sm text-zinc-500">Vídeo aguardando URL pública de hospedagem.</p></div>
+            <div className="rounded-2xl border border-white/10 bg-neutral-950/60 p-5"><p className="font-medium text-white">Dicas e diagnóstico</p><p className="mt-2 text-sm text-zinc-500">Vídeo aguardando URL pública de hospedagem.</p></div>
+          </div>
+        </div>
+      </Wrap>
+    </section>
+  );
+}
+
 /* ───────── Prova social ───────── */
 const reviews = [
   ['Juliana Meirelles', 'Local Guide • 32 avaliações', 'A equipe da ADZ foi sensacional no diagnóstico inicial da minha marca! Eles nos deram insights preciosos e super detalhados sobre o nosso posicionamento atual e oportunidades de tráfego. Super recomendo!'],
@@ -341,7 +384,7 @@ export default function App() {
   return (
     <>
       <Navbar />
-      <main><Hero /><Calculator /><Leaks /><Solutions /><Method /><About /><Proof /><FinalCTA /></main>
+      <main><Hero /><Calculator /><Leaks /><Solutions /><CasesInsights /><Method /><About /><Proof /><FinalCTA /></main>
       <Footer />
     </>
   );
